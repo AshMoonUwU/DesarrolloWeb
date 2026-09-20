@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuickOrder – Menú de Bebidas</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- Barra Superior de Anuncios Promocionales -->
+    <div class="top-bar-anuncio">
+        <span>DOMICILIOS EXPRESS:</span> ¡Envíos gratis en pedidos superiores a $50.000! • Tiempo estimado: 25-35 min
+    </div>
+
+    <!-- Encabezado Superior con Logo y Acceso al Carrito -->
+    <header class="header-principal">
+        <div class="header-contenedor">
+            <a href="index.html" class="logo-enlace" aria-label="QuickOrder Inicio">
+                <div class="logo-icono">
+                    <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="4" y="20" width="44" height="24" rx="4" ry="4" fill="currentColor"/>
+                        <rect x="8" y="24" width="20" height="10" rx="2" ry="2" fill="white" opacity="0.3"/>
+                        <rect x="2" y="12" width="48" height="10" rx="3" ry="3" fill="currentColor" opacity="0.8"/>
+                        <rect x="2" y="18" width="48" height="4" rx="0" fill="currentColor" opacity="0.5"/>
+                        <circle cx="14" cy="48" r="5" fill="currentColor"/>
+                        <circle cx="14" cy="48" r="2.5" fill="white" opacity="0.4"/>
+                        <circle cx="36" cy="48" r="5" fill="currentColor"/>
+                        <circle cx="36" cy="48" r="2.5" fill="white" opacity="0.4"/>
+                        <line x1="48" y1="20" x2="58" y2="36" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+                        <path d="M20 22 Q22 18 24 22" stroke="white" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+                        <path d="M28 22 Q30 17 32 22" stroke="white" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+                    </svg>
+                </div>
+                <div class="logo-texto">
+                    <span class="logo-nombre">Quick<span>Order</span></span>
+                    <span class="logo-eslogan">Distinción y Sabor</span>
+                </div>
+            </a>
+
+            <div class="header-acciones">
+                <button id="btn-abrir-carrito" class="btn-abrir-carrito" aria-label="Ver carrito de compras">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/>
+                    </svg>
+                    <span class="btn-texto">Mi Pedido</span>
+                    <span id="badge-contador-header" class="badge-contador">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Menú de Navegación por Categorías con Iconos SVG -->
+    <div class="nav-categorias-wrapper">
+        <nav class="categorias" aria-label="Categorías del menú">
+            <a href="index.html" class="btn-categoria inicio">
+                <span class="cat-icono"><svg viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg></span>
+                <span>Inicio</span>
+            </a>
+            <a href="hamburguesas.html" class="btn-categoria hamburguesas">
+                <span class="cat-icono"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 4.48 2 7.5c0 .64.25 1.25.7 1.78C2.26 9.87 2 10.66 2 11.5c0 1.93 1.57 3.5 3.5 3.5H19c1.93 0 3.5-1.57 3.5-3.5 0-.84-.26-1.63-.7-2.22.45-.53.7-1.14.7-1.78C22 4.48 17.52 2 12 2zm-8.5 15c0 2.21 3.81 4 8.5 4s8.5-1.79 8.5-4H3.5z"/></svg></span>
+                <span>Hamburguesas</span>
+            </a>
+            <a href="perros.html" class="btn-categoria perros">
+                <span class="cat-icono"><svg viewBox="0 0 24 24"><path d="M18.8 6.2c-1.6-1.6-4.1-1.6-5.7 0L4.2 15.1c-1.6 1.6-1.6 4.1 0 5.7 1.6 1.6 4.1 1.6 5.7 0l8.9-8.9c1.6-1.6 1.6-4.1 0-5.7zm-2.8 4.3L7.1 19.4c-.8.8-2.1.8-2.8 0s-.8-2.1 0-2.8L13.2 7.7c.8-.8 2.1-.8 2.8 0s.8 2.1 0 2.8z"/></svg></span>
+                <span>Perros Calientes</span>
+            </a>
+            <a href="salchipapas.html" class="btn-categoria salchipapas">
+                <span class="cat-icono"><svg viewBox="0 0 24 24"><path d="M18.5 3H5.5C4.67 3 4 3.67 4 4.5v15c0 .83.67 1.5 1.5 1.5h13c.83 0 1.5-.67 1.5-1.5v-15c0-.83-.67-1.5-1.5-1.5zM7 6h2v9H7V6zm4 0h2v11h-2V6zm4 0h2v8h-2V6z"/></svg></span>
+                <span>Salchipapas</span>
+            </a>
+            <a href="bebidas.html" class="btn-categoria bebidas activo">
+                <span class="cat-icono"><svg viewBox="0 0 24 24"><path d="M20 3H4v2h1.5l1.5 14.5c.1 1 1 1.5 2 1.5h6c1 0 1.9-.5 2-1.5L18.5 5H20V3zm-5 15H9L7.8 6h8.4L15 18z"/></svg></span>
+                <span>Bebidas</span>
+            </a>
+        </nav>
+    </div>
+
+    <!-- Banner Dedicado de Categoría: Bebidas (Ancho Completo 100%) -->
+    <section class="categoria-banner bebidas-banner">
+        <div class="cat-banner-inner">
+            <div class="cat-banner-info">
+                <span class="cat-banner-badge">REFRESCANTE & NATURAL</span>
+                <h1 class="cat-banner-titulo">Bebidas Heladas & Jugos Naturales</h1>
+                <p class="cat-banner-desc">
+                    Acompaña tu comida con limonadas cremosas, jugos 100% de pura fruta, gaseosas tradicionales y cervezas bien heladas.
+                </p>
+
+            </div>
+            <div class="cat-banner-media">
+                <img src="img/limonada_coco.jpg" alt="Bebidas Refrescantes QuickOrder" class="cat-banner-img">
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Bebidas Organizada por Líneas -->
+    <main class="seccion-platos seccion-bebidas">
+        
+        <!-- Subsección 1: Especiales & Naturales -->
+        <div class="subseccion-header">
+            <h2 class="subseccion-titulo">
+                Bebidas Especiales & Naturales
+            </h2>
+            <span class="subseccion-contador">100% Natural</span>
+        </div>
+
+        <div class="contenedor-platos">
+            
+            <!-- Producto 1: Limonada de Coco -->
+            <article class="tarjeta-plato">
+                <div class="tarjeta-media">
+                    <span class="badge-destacado favorito">FAVORITA</span>
+                    <img src="img/limonada_coco.jpg" alt="Limonada de Coco Cremosa" class="imagen-plato">
+                </div>
+                <div class="tarjeta-cuerpo">
+                    <h3 class="nombre-plato">Limonada de Coco</h3>
+                    <p class="descripcion-plato">Bebida cremosa y refrescante preparada al instante con zumo de limón fresco y hielo.</p>
+                </div>
+                <div class="tarjeta-footer-acciones">
+                    <p class="precio-plato">$ 12.000</p>
+                    <button class="btn-agregar" data-nombre="Limonada de Coco" data-valor="12000">Agregar</button>
+                </div>
+            </article>
+
+            <!-- Producto 2: Jugo Natural -->
+            <article class="tarjeta-plato">
+                <div class="tarjeta-media">
+                    <span class="badge-destacado nuevo">FRUTA NATURAL</span>
+                    <img src="img/bebida.jpg" alt="Jugo Natural de Fruta" class="imagen-plato">
+                </div>
+                <div class="tarjeta-cuerpo">
+                    <h3 class="nombre-plato">Jugo Natural</h3>
+                    <p class="descripcion-plato">Jugos de fruta 100% natural a elección (Maracuyá, Mango, Fresa, Mora, Guanábana o Lulo).</p>
+                </div>
+                <div class="tarjeta-footer-acciones">
+                    <p class="precio-plato">$ 8.000</p>
+                    <button class="btn-agregar" data-nombre="Jugo Natural" data-valor="8000">Agregar</button>
+                </div>
+            </article>
+
+        </div>
+
+        <!-- Subsección 2: Gaseosas & Cervezas -->
+        <div class="subseccion-header">
+            <h2 class="subseccion-titulo">
+                Refrescos & Cervezas Frías
+            </h2>
+            <span class="subseccion-contador">Bien Frías</span>
+        </div>
+
+        <div class="contenedor-platos">
+
+            <!-- Producto 3: Gaseosa Personal -->
+            <article class="tarjeta-plato">
+                <div class="tarjeta-media">
+                    <span class="badge-destacado combo">CLÁSICA</span>
+                    <img src="img/bebida.jpg" alt="Gaseosa Fría en Botella o Lata" class="imagen-plato">
+                </div>
+                <div class="tarjeta-cuerpo">
+                    <h3 class="nombre-plato">Gaseosa Personal</h3>
+                    <p class="descripcion-plato">Refrescos personales de 400ml bien fríos: Coca-Cola original, Kola Román, Manzana Postobón, Colombiana o Sprite.</p>
+                </div>
+                <div class="tarjeta-footer-acciones">
+                    <p class="precio-plato">$ 6.000</p>
+                    <button class="btn-agregar" data-nombre="Gaseosa Personal" data-valor="6000">Agregar</button>
+                </div>
+            </article>
+
+            <!-- Producto 4: Cerveza Artesanal -->
+            <article class="tarjeta-plato">
+                <div class="tarjeta-media">
+                    <span class="badge-destacado">ARTESANAL</span>
+                    <img src="img/bebida.jpg" alt="Cerveza Artesanal Fría" class="imagen-plato">
+                </div>
+                <div class="tarjeta-cuerpo">
+                    <h3 class="nombre-plato">Cerveza Artesanal</h3>
+                    <p class="descripcion-plato">Cerveza artesanal de 330ml bien fría tipo Blonde Ale o IPA, con notas cítricas ideales para acompañar tus platos.</p>
+                </div>
+                <div class="tarjeta-footer-acciones">
+                    <p class="precio-plato">$ 10.000</p>
+                    <button class="btn-agregar" data-nombre="Cerveza Artesanal" data-valor="10000">Agregar</button>
+                </div>
+            </article>
+
+        </div>
+    </main>
+
+    <!-- Drawer Lateral del Carrito de Compras -->
+    <div id="carrito-overlay" class="carrito-overlay"></div>
+    <aside id="carrito-panel" class="carrito-panel" aria-label="Carrito de compras">
+        <div class="carrito-header">
+            <div class="carrito-titulo-wrapper">
+                <h3 class="carrito-titulo">Tu Pedido</h3>
+                <span id="carrito-badge-items" class="carrito-badge-items">0 items</span>
+            </div>
+            <button id="btn-cerrar-carrito" class="btn-cerrar-carrito" aria-label="Cerrar carrito">
+                <svg viewBox="0 0 24 24">
+                    <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+                </svg>
+            </button>
+        </div>
+
+        <div id="carrito-cuerpo" class="carrito-cuerpo"></div>
+
+        <div class="carrito-footer">
+            <div class="carrito-resumen-fila">
+                <span>Subtotal:</span>
+                <span id="carrito-subtotal-monto">$ 0</span>
+            </div>
+            <div class="carrito-total-fila">
+                <span>Total:</span>
+                <span id="carrito-total-monto" class="carrito-total-monto">$ 0</span>
+            </div>
+            <div class="carrito-acciones">
+                <button id="btn-finalizar-pedido" class="btn-finalizar-pedido">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                    </svg>
+                    Confirmar Pedido
+                </button>
+                <button id="btn-vaciar-carrito" class="btn-vaciar-carrito">Vaciar Carrito</button>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Pie de Página Profesional y Elegante -->
+    <footer class="footer-principal">
+        <div class="footer-contenedor">
+            <div class="footer-marca">
+                <span class="footer-logo-nombre">Quick<span>Order</span></span>
+                <span class="footer-logo-eslogan">Distinción y Sabor</span>
+            </div>
+
+            <div class="footer-columna">
+                <h4 class="footer-columna-titulo">Horarios de Atención</h4>
+                <ul class="footer-lista">
+                    <li class="footer-item"><strong>Lunes – Jueves:</strong> 12:00 PM – 10:00 PM</li>
+                    <li class="footer-item"><strong>Viernes – Sábado:</strong> 12:00 PM – 11:30 PM</li>
+                    <li class="footer-item"><strong>Domingos:</strong> 1:00 PM – 9:30 PM</li>
+                </ul>
+            </div>
+
+            <div class="footer-columna">
+                <h4 class="footer-columna-titulo">Contacto & Domicilios</h4>
+                <ul class="footer-lista">
+                    <li class="footer-item"><strong>Dirección:</strong> Av 11 #30 - 12, Los Patios</li>
+                    <li class="footer-item"><strong>WhatsApp:</strong> +57 313 436 2346</li>
+                    <li class="footer-item"><strong>Email:</strong> contacto@quickorder.com</li>
+                </ul>
+            </div>
+
+            <div class="footer-columna">
+                <h4 class="footer-columna-titulo">Medios de Pago</h4>
+                <div class="footer-pagos-grid">
+                <ul class="footer-pagos-lista">
+                    <li class="footer-pago-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="6" width="20" height="12" rx="2"/><circle cx="12" cy="12" r="2.5"/><path d="M6 12h.01M18 12h.01"/>
+                        </svg>
+                        <strong>Efectivo</strong>
+                    </li>
+                    <li class="footer-pago-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#7c3aed" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="7" y="2" width="10" height="20" rx="2"/><circle cx="12" cy="17" r="1" fill="#7c3aed"/><path d="M10 6h4"/>
+                        </svg>
+                        <strong style="color:#a78bfa;">Nequi</strong>
+                    </li>
+                    <li class="footer-pago-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 12V7a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-3"/><path d="M16 12h5v4h-5a2 2 0 0 1 0-4z"/>
+                        </svg>
+                        <strong style="color:#f87171;">Daviplata</strong>
+                    </li>
+                    <li class="footer-pago-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#0ea5e9" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/><path d="M6 15h4"/>
+                        </svg>
+                        <strong style="color:#7dd3fc;">Tarjetas Débito/Crédito</strong>
+                    </li>
+                    <li class="footer-pago-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/>
+                        </svg>
+                        <strong style="color:#86efac;">PSE</strong>
+                    </li>
+                </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 QuickOrder – Distinción y Sabor. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

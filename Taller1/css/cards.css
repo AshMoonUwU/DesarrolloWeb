@@ -1,0 +1,155 @@
+/* ==========================================================================
+   4. TARJETA DE PRODUCTO / PLATO (ESTILO KIOSCO INTERNACIONAL)
+   ========================================================================== */
+
+.tarjeta-plato {
+    background-color: var(--color-blanco);
+    border-radius: var(--radio-tarjeta);
+    box-shadow: var(--sombra-tarjeta);
+    border: 1px solid var(--color-borde-suave);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding-bottom: 20px;
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease, border-color 0.3s ease;
+    position: relative;
+}
+
+.tarjeta-plato:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--sombra-hover);
+    border-color: #cbd5e1;
+}
+
+/* Contenedor de Imagen y Badge Superior */
+.tarjeta-media {
+    position: relative;
+    width: 100%;
+    height: 210px;
+    overflow: hidden;
+    background-color: #f1f5f9;
+}
+
+.imagen-plato {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.tarjeta-plato:hover .imagen-plato {
+    transform: scale(1.06);
+}
+
+/* Badges Flotantes de Categoría / Promoción */
+.badge-destacado {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background: linear-gradient(135deg, #d32f2f, #b71c1c);
+    color: #ffffff;
+    font-size: 0.72rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    padding: 5px 12px;
+    border-radius: var(--radio-pill);
+    box-shadow: 0 4px 10px rgba(211, 47, 47, 0.4);
+    z-index: 2;
+}
+
+.badge-destacado.nuevo {
+    background: linear-gradient(135deg, #ffb300, #f57f17);
+    color: #1c0d0d;
+    box-shadow: 0 4px 10px rgba(255, 179, 0, 0.4);
+}
+
+.badge-destacado.favorito {
+    background: linear-gradient(135deg, #c62828, #9a0007);
+    color: #ffffff;
+    box-shadow: 0 4px 10px rgba(198, 40, 40, 0.4);
+}
+
+.badge-destacado.combo {
+    background: linear-gradient(135deg, #ff8f00, #e65100);
+    color: #ffffff;
+    box-shadow: 0 4px 10px rgba(255, 143, 0, 0.4);
+}
+
+/* Cuerpo de la Tarjeta */
+.tarjeta-cuerpo {
+    padding: 18px 18px 0;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+/* Nombre del Plato */
+.nombre-plato {
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: var(--color-titulo);
+    margin-bottom: 8px;
+    line-height: 1.3;
+}
+
+/* Descripción de Ingredientes */
+.descripcion-plato {
+    font-size: 0.9rem;
+    color: var(--color-texto-secundario);
+    line-height: 1.5;
+    margin-bottom: 16px;
+    flex-grow: 1;
+}
+
+/* Pie de la Tarjeta: Precio y Botón */
+.tarjeta-footer-acciones {
+    padding: 14px 18px 0;
+    border-top: 1px solid var(--color-borde-suave);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.precio-plato {
+    font-size: 1.35rem;
+    font-weight: 900;
+    color: var(--color-primario-oscuro);
+    letter-spacing: -0.5px;
+    margin: 0;
+}
+
+/* Botón Agregar al Pedido */
+.btn-agregar {
+    background: linear-gradient(135deg, var(--color-primario), var(--color-primario-oscuro));
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: var(--radio-pill);
+    font-size: 0.9rem;
+    font-weight: 700;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: var(--transicion-suave);
+    box-shadow: 0 4px 12px rgba(211, 47, 47, 0.3);
+}
+
+.btn-agregar:hover {
+    background: linear-gradient(135deg, #b71c1c, #9a0007);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(211, 47, 47, 0.45);
+}
+
+.btn-agregar:active {
+    transform: scale(0.95);
+}
+
+.btn-agregar.agregado {
+    background: linear-gradient(135deg, #2e7d32, #1b5e20);
+    box-shadow: 0 4px 12px rgba(46, 125, 50, 0.4);
+}

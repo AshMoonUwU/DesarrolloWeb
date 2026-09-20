@@ -1,0 +1,60 @@
+/* ==========================================================================
+   1. VARIABLES DE DISEÑO (DESIGN TOKENS)
+   ========================================================================== */
+
+:root {
+    /* Paleta Neutra y de Fondo */
+    --bg-principal: #fbf9f5;
+    --bg-header: #ffffff;
+    --bg-tarjeta: #ffffff;
+    --bg-footer: #1a0f0f;
+    --color-blanco: #ffffff;
+    --color-borde: #f0e6d6;
+    --color-borde-suave: #f7f1e5;
+
+    /* Tipografía y Textos */
+    --fuente-principal: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+    --color-texto: #2d2424;
+    --color-texto-secundario: #6e6259;
+    --color-texto-claro: #a09285;
+    --color-titulo: #1c0d0d;
+    
+    /* Colores Principales (Rojo y Amarillo) */
+    --color-primario: #d32f2f;
+    --color-primario-oscuro: #b71c1c;
+    --color-amarillo: #ffb300;
+    --color-amarillo-brillante: #ffc107;
+    --color-amarillo-oscuro: #f57f17;
+    --color-amarillo-claro: #fff8e1;
+
+    /* Botones e Interacciones */
+    --color-boton-hover: #b71c1c;
+    --color-boton-borde-hover: #9a0007;
+    --color-acento: #ffb300;
+    --color-acento-hover: #ffa000;
+    --color-exito: #2e7d32;
+    --color-peligro: #c62828;
+
+    /* Temas y Acentos por Categoría (Armonizados en Rojo y Amarillo) */
+    --color-inicio: #d32f2f;
+    --color-hamburguesas: #c62828;
+    --color-perros: #e65100;
+    --color-salchipapas: #f57f17;
+    --color-bebidas: #ff8f00;
+
+    /* Sombras y Elevaciones */
+    --sombra-header: 0 2px 10px rgba(183, 28, 28, 0.08);
+    --sombra-tarjeta: 0 4px 14px rgba(0, 0, 0, 0.06);
+    --sombra-hover: 0 10px 24px rgba(211, 47, 47, 0.15);
+    --sombra-carrito: -5px 0 25px rgba(0, 0, 0, 0.2);
+    --sombra-boton: 0 3px 8px rgba(211, 47, 47, 0.25);
+
+    /* Radios de Borde */
+    --radio-tarjeta: 12px;
+    --radio-boton: 8px;
+    --radio-pill: 50px;
+    --radio-control: 6px;
+
+    /* Transiciones */
+    --transicion-suave: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}

@@ -1,0 +1,142 @@
+/* ==========================================================================
+   3. NAVEGACIÓN Y MENÚ DE CATEGORÍAS (SOLAPAS MINIMALISTAS CON LÍNEA INFERIOR)
+   ========================================================================== */
+
+.nav-categorias-wrapper {
+    background-color: rgba(255, 255, 255, 0.98);
+    border-bottom: 2px solid var(--color-borde-suave);
+    padding: 0 20px;
+    position: sticky;
+    top: 71px;
+    z-index: 90;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+}
+
+.categorias {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* Solapas Limpias sin Ovalos */
+.btn-categoria {
+    background-color: transparent;
+    border: none;
+    border-bottom: 3px solid transparent;
+    border-radius: 0;
+    color: var(--color-texto-secundario);
+    padding: 16px 8px;
+    font-size: 0.98rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: color 0.2s ease, border-color 0.2s ease;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: none;
+    position: relative;
+}
+
+/* Iconos SVG dentro de los botones de categoría */
+.cat-icono {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease;
+}
+
+.cat-icono svg {
+    width: 100%;
+    height: 100%;
+    fill: currentColor;
+}
+
+/* Hover: Transición limpia con indicador de línea inferior */
+.btn-categoria:hover {
+    color: var(--color-primario);
+    border-bottom-color: var(--color-primario);
+    background-color: transparent;
+    transform: none;
+    box-shadow: none;
+}
+
+.btn-categoria:hover .cat-icono {
+    transform: translateY(-2px);
+}
+
+/* Efectos de Línea Inferior por Categoría */
+.btn-categoria.inicio:hover {
+    color: #d32f2f;
+    border-bottom-color: #d32f2f;
+    background-color: transparent;
+}
+
+.btn-categoria.hamburguesas:hover {
+    color: #c62828;
+    border-bottom-color: #c62828;
+    background-color: transparent;
+}
+
+.btn-categoria.perros:hover {
+    color: #e65100;
+    border-bottom-color: #e65100;
+    background-color: transparent;
+}
+
+.btn-categoria.salchipapas:hover {
+    color: #f57f17;
+    border-bottom-color: #f57f17;
+    background-color: transparent;
+}
+
+.btn-categoria.bebidas:hover {
+    color: #ff8f00;
+    border-bottom-color: #ff8f00;
+    background-color: transparent;
+}
+
+/* Estados Activos Destacados con Línea Inferior Marcada */
+.btn-categoria.activo {
+    font-weight: 800;
+    background-color: transparent;
+    box-shadow: none;
+}
+
+.btn-categoria.activo.inicio {
+    color: #d32f2f;
+    border-bottom-color: #d32f2f;
+    background-color: transparent;
+}
+
+.btn-categoria.activo.hamburguesas {
+    color: #c62828;
+    border-bottom-color: #c62828;
+    background-color: transparent;
+}
+
+.btn-categoria.activo.perros {
+    color: #e65100;
+    border-bottom-color: #e65100;
+    background-color: transparent;
+}
+
+.btn-categoria.activo.salchipapas {
+    color: #f57f17;
+    border-bottom-color: #f57f17;
+    background-color: transparent;
+}
+
+.btn-categoria.activo.bebidas {
+    color: #ff8f00;
+    border-bottom-color: #ff8f00;
+    background-color: transparent;
+}
+
